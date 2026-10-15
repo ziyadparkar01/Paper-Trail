@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix PaperTrail — Local-First Financial Document Manager",
+  "description": "Privacy-first offline document parsing, smart audit engine, and CA-ready export for freelancers with Nib the paper mascot.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

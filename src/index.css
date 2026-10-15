@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-viewport: #0D1912;
+    --canvas-sage: #EBF0E8;
+    --card-surface: #DEE6DC;
+    --card-surface-glass: rgba(255, 255, 255, 0.55);
+    --text-forest: #141D17;
+    --text-muted: #5E6D64;
+    --accent-mint: #82E6B3;
+    --accent-mint-dark: #0E1713;
+    --border-subtle: rgba(20, 29, 23, 0.08);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0D1912;
+    color: #141D17;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .font-serif, h1, .metric-serif {
+    font-family: 'Playfair Display', 'Instrument Serif', Georgia, serif;
+  }
+
+  .font-cursive {
+    font-family: 'Caveat', cursive, sans-serif;
+  }
+
+  .font-signature {
+    font-family: 'Alex Brush', cursive;
+  }
+
+  code, pre, .font-mono, .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* 3D Paper Tilt & Thermal Document Textures */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Institutional Editorial Document styling */
+.paper-receipt {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFBF9 100%);
+  box-shadow: 0 20px 40px -15px rgba(13, 25, 18, 0.15), 0 0 1px 1px rgba(20, 29, 23, 0.08);
+  position: relative;
+}
+
+/* Serrated top & bottom edges */
+.receipt-serrated-bottom {
+  position: relative;
+}
+.receipt-serrated-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-image: radial-gradient(circle, transparent, transparent 50%, #FFFFFF 50%, #FFFFFF 100%);
+  background-size: 16px 16px;
+  background-position: bottom;
+  transform: rotate(180deg);
+}
+
+/* Luxury Ink Stamp Animation */
+@keyframes stampIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.8) rotate(-12deg);
+  }
+  60% {
+    opacity: 0.95;
+    transform: scale(0.96) rotate(3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-6deg);
+  }
+}
+
+.animate-stamp {
+  animation: stampIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar matching sage luxury palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EBF0E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4CFC2;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AAB7A8;
+}
